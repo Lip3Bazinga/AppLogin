@@ -47,6 +47,7 @@ Este repositório contém duas pastas principais:
    ```bash
    cd server
    npm install
+   npx prisma generate
    ```
 
 ---
