@@ -1,4 +1,4 @@
-// In user.service.ts:
+
 import { ConflictException, Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma.service';
 import { CreateUserDto } from './dto/dto/user.dto';
@@ -9,7 +9,7 @@ export class UserService {
   constructor(private prisma: PrismaService) { }
 
   async create(dto: CreateUserDto) {
-    const user = await this.prisma.user.findUnique({ // Corrected line!
+    const user = await this.prisma.user.findUnique({ 
       where: {
         email: dto.email,
       },
@@ -19,7 +19,7 @@ export class UserService {
 
     const hashedPassword = await hash(dto.password, 10);
 
-    const newUser = await this.prisma.user.create({ // Corrected line!
+    const newUser = await this.prisma.user.create({ 
       data: {
         ...dto,
         password: hashedPassword,
