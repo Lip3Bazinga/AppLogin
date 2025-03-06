@@ -64,7 +64,7 @@ export default function Page() {
       className="w-screen min-h-screen bg-cover bg-center flex flex-col lg:flex-row"
       style={{ backgroundImage: "url('/assets/images/background.png')" }}
     >
-      <div className="flex-1 min-w-[300px] flex flex-col items-center justify-center p-4">
+      <div className="flex-1 min-w-[300px] flex flex-col items-center justify-around p-4">
         <div className="contentLogo mb-4">
           <img src="assets/images/bp-full-shop.png" />
         </div>
