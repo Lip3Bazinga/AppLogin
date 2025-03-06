@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Loader from './loading';
 
 const services = [
   { image: "assets/images/digital-marketing.png", description: "Planejamento & Briefing de Campanhas" },
@@ -33,11 +34,11 @@ export default function Page() {
   }, [session, router]);
 
   if (status === "loading") {
-    return <div>Carregando...</div>;
+    return <Loader />;
   }
 
   if (session) {
-    return <div>Redirecionando...</div>;
+    return <Loader message="Redirecionando..." />;
   }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {

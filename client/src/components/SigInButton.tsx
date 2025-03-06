@@ -28,12 +28,6 @@ const SignInButton = () => {
       >
         Entrar
       </Link>
-      <Link
-        href={"/signup"}
-        className="flex gap-4 ml-auto bg-green-600 text-green-200 p-2 rounded"
-      >
-        Criar conta
-      </Link>
     </div>
   );
 };
